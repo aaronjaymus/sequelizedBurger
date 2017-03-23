@@ -1,33 +1,37 @@
 {
-  "name": "burger",
+  "name": "sequelized-burger",
   "version": "0.1.0",
-  "description": "Create burgers then devour them!",
+  "description": "Eat a Burger! Now with Sequelize!",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aaronjaymus/burger.git"
-  },
-  "keywords": [
-    "burgers",
-    "express",
-    "node",
-    "orm",
-    "devour"
-  ],
-  "author": "A. James McHale",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/aaronjaymus/burger/issues"
-  },
-  "homepage": "https://github.com/aaronjaymus/burger#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "express-handlebars": "^3.0.0",
     "method-override": "^2.3.7",
-    "mysql": "^2.13.0"
-  }
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronjaymus/sequelizedBurger.git"
+  },
+  "keywords": [
+    "burger",
+    "sequelize",
+    "mysql",
+    "node",
+    "express",
+    "handlebars"
+  ],
+  "author": "A. James McHale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaronjaymus/sequelizedBurger/issues"
+  },
+  "homepage": "https://github.com/aaronjaymus/sequelizedBurger#readme"
 }
