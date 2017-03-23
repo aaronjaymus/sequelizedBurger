@@ -39,7 +39,11 @@ var db = require("../models");
 module.exports = function(app) {
 	app.get("/", function(req, res){
 		db.burger.findAll({}).then(function(dbTodo) {
-			res.json(dbTodo);
+			var hbsObject = {
+				burgers: dbTodo
+			};
+			console.log(hbsObject);
+			res.render("index", hbsObject);
 		});
 	});
 
@@ -47,7 +51,7 @@ module.exports = function(app) {
 		db.burger.create({
 			burger_name: req.body.burger_name
 		}).then(function(dbTodo){
-			res.json(dbTodo);
+			res.redirect("/");
 		});
 	});
 
@@ -57,7 +61,7 @@ module.exports = function(app) {
 		}, {
 			where: {id: req.params.id}
 		}).then(function(dbTodo){
-			res.json(dbTodo);
+			res.redirect("/");
 		});
 	});
 }
